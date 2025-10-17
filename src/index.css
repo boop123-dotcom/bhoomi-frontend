@@ -1,0 +1,88 @@
+/* =======================================================
+   🌈 OmniScope Tailwind Master Stylesheet
+   ======================================================= */
+
+/* 1️⃣ — Tailwind base imports */
+@import "leaflet/dist/leaflet.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =======================================================
+   2️⃣ — Global Styles
+   ======================================================= */
+body {
+  @apply bg-gray-100 text-gray-900 font-sans antialiased;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Smooth fade-in animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* =======================================================
+   3️⃣ — OmniScope Dashboard Layout
+   ======================================================= */
+
+/* Sidebar (left navigation) */
+.sidebar {
+  @apply fixed top-0 left-0 h-full w-60 bg-blue-900 text-white flex flex-col items-start p-6 space-y-4 shadow-lg;
+}
+
+.sidebar h2 {
+  @apply text-2xl font-bold mb-4 tracking-wide;
+}
+
+.sidebar a {
+  @apply text-white hover:text-blue-300 transition-all duration-200;
+}
+
+/* Main content area */
+.main-content {
+  @apply ml-60 p-8 bg-gray-100 min-h-screen;
+}
+
+/* Generic reusable card style */
+.card {
+  @apply bg-white rounded-xl shadow-md p-6 mb-6 transition transform hover:scale-[1.02];
+}
+
+/* Accent buttons and elements */
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition duration-200;
+}
+
+/* Headings inside content */
+h1, h2, h3 {
+  @apply text-gray-800 font-semibold;
+}
+
+/* =======================================================
+   4️⃣ — Utility helpers
+   ======================================================= */
+.transition-slow {
+  transition: all 0.3s ease-in-out;
+}
+
+.container-centered {
+  @apply flex flex-col items-center justify-center min-h-screen;
+}

@@ -1,0 +1,36 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# ================ #
+#    Frontend      #
+# ================ #
+node_modules/
+.pnp
+.pnp.js
+.DS_Store
+*.log
+build/
+dist/
+.cache/
+coverage/
+
+# Ignore all env files in frontend
+frontend/.env
+
+# ================ #
+#    Backend       #
+# ================ #
+backend/node_modules/
+backend/.env
+backend/*.log
+
+# ================ #
+#    Root Env      #
+# ================ #
+.env              # root .env
+*.env             # catch any accidental env files anywhere
+
+# ================ #
+#    IDE/Tools     #
+# ================ #
+.vscode/
+.idea/
